@@ -22,23 +22,22 @@ export const PostForm: React.FC = () => {
         body: Yup.string().required('Required')
     });
 
-    return <Formik onSubmit={(values: PostFormType) => {
+    return <Formik onSubmit={(values: PostFormType, {resetForm}) => {
         d(postNewPost(values))
         console.log(values)
+        resetForm()
     }}
-                   validationSchema={SignupSchema}
-                   initialValues={{
-                       title: '',
-                       body: ''
-                   }}>
-
+       validationSchema={SignupSchema}
+       initialValues={{
+           title: '',
+           body: ''
+       }}>
         {({errors, touched}) => (
             <Form>
                 <Container className={styles.background}>
                     <h1 className={styles.toCenter}>Creating New Post</h1>
                     <div className={s.myFrom}>
                         <div>
-
                             <Field name="title"
                                    type="text"
                                    placeholder={"Title"}

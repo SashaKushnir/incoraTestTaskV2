@@ -3,11 +3,10 @@ import { usersA } from "./usersA";
 import { UsersArrayType } from "./usersTypes";
 
 interface InitialUsersType {
-   usersInfo?: UsersArrayType
+    usersInfo?: UsersArrayType
 }
 
-const initialUsersState: InitialUsersType = {
-}
+const initialUsersState: InitialUsersType = {}
 
 export const usersR = (users = initialUsersState, action: ActionsTypes<typeof usersA>): InitialUsersType => {
     switch (action.type) {

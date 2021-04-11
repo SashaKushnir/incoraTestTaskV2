@@ -4,6 +4,7 @@ import { setUsersT } from "../../redux/users/usersT";
 import { RootState } from "../../redux/store";
 import { UsersItem } from "./UsersItem";
 import { FetchingComponent } from "../../common/compon/FetchingComponent/FetchingComponent";
+import s from './UserPage.module.css'
 
 export const UsersPage = () => {
     const d = useDispatch()
@@ -15,10 +16,10 @@ export const UsersPage = () => {
     },[])
 
 
-    if(isFetching)
+    if (isFetching)
         return <FetchingComponent/>
 
-    return <div>
+    return <div className={s.wrap}>
         {usersToJSX}
     </div>
 }

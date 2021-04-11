@@ -1,4 +1,3 @@
-
 export type PostsArrayType = Array<PostItemType>
 
 export interface PostItemType {

@@ -6,6 +6,9 @@ interface CommentsItemProps {
 }
 
 export const CommentsItem: React.FC<CommentsItemProps> = ({commentItem}) => {
+
+
+
     return <div>
         <div><b>Body: </b>{commentItem.body}</div>
         <div><b>Email: </b>{commentItem.email}</div>

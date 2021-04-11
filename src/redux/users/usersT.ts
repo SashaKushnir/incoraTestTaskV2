@@ -9,7 +9,7 @@ export const setUsersT = () => async (d: Dispatch<ActionsTypes<typeof usersA | t
         d(commonA.fetchingToggle(true))
         let response = await users.getUsersAPI()
         console.log(response)
-        if (response.statusText === ""){
+        if (response.statusText === "") {
             d(usersA.setUsers(response.data))
             d(commonA.fetchingToggle(false))
         }

@@ -26,7 +26,8 @@ export interface CompanyType {
     catchPhrase: string
     name: string
 }
+
 export interface Geo {
-    lat:string
+    lat: string
     lng: string
 }

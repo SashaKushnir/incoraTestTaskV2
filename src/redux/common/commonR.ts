@@ -33,7 +33,7 @@ export const commonR = (common = initialCommonState, action: ActionsTypes<typeof
         case "SET_ERROR_MESSAGE":
             return {
                 ...common,
-                authErrorMessage:action.errorM
+                authErrorMessage: action.errorM
             }
         default:
             return common

@@ -5,7 +5,8 @@ import { PostItemType } from "../../redux/posts/postsTypes";
 import { setCommentsT } from "../../redux/comments/commentsT";
 import { IconLabelButtons } from "../../common/compon/Material/MyButton";
 import { deletePost } from "../../redux/posts/postsT";
-import { EditButton, ShowCommetnsButton } from "../../common/compon/Material/ShowEditButton";
+import { ShowCommetnsButton } from "../../common/compon/Material/ShowEditButton";
+import s from './PostForm.module.css'
 
 interface PostsItemProps {
     postItem: PostItemType
@@ -24,10 +25,9 @@ export const PostsItem: React.FC<PostsItemProps> = ({postItem}) => {
     return <div>
         <div><b>Title: </b>{postItem.title}</div>
         <div><b>Body: </b>{postItem.body}</div>
-        <div onClick={showComments}><ShowCommetnsButton/></div>
-        <div onClick={deleteItem}><IconLabelButtons /></div>
-        <div onClick={deleteItem}><EditButton/></div>
-
-
+        <div className={s.buttonWrap}>
+            <span onClick={showComments}><ShowCommetnsButton/></span>
+            <span onClick={deleteItem}><IconLabelButtons/></span>
+        </div>
     </div>
 }

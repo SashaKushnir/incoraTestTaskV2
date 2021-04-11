@@ -8,23 +8,23 @@ import { useHistory } from "react-router-dom";
 import { commonA } from "../../redux/common/commonA";
 
 export const Authorisation = () => {
-    const isFetching = useSelector((state:RootState) => state.common.isFetching)
+    const isFetching = useSelector((state: RootState) => state.common.isFetching)
     const isAuthFromStorage = localStorage.getItem("isAuth")
     const history = useHistory()
     const d = useDispatch()
     useEffect(() => {
-        if(isAuthFromStorage) {
+        if (isAuthFromStorage) {
             d(commonA.authToggle(true))
             history.push('/content')
         }
-    },[isAuthFromStorage])
+    }, [isAuthFromStorage])
 
-    if(isFetching)
+    if (isFetching)
         return <FetchingComponent/>
 
-        return <div className={s.wrap}>
-            <h1 className={s.headerText}>Log in</h1>
-            <LoginForm/>
-        </div>
+    return <div className={s.wrap}>
+        <h1 className={s.headerText}>Log in</h1>
+        <LoginForm/>
+    </div>
 }
 

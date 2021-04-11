@@ -3,7 +3,7 @@ import s from './Header.module.css'
 import { useDispatch } from "react-redux";
 import { commonA } from "../../../redux/common/commonA";
 
-export const Header = ( ) => {
+export const Header = () => {
     const d = useDispatch()
     const logOut = () => {
         d(commonA.authToggle(false))

@@ -23,3 +23,7 @@
     display: inline-block;
     font-size: 17px;
 }
+.buttonWrap{
+    display: grid;
+    grid-template-columns: auto auto;
+}

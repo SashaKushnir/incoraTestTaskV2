@@ -6,6 +6,5 @@ export const myGetInstance = axios.create({
     baseURL: BaseUrl
 })
 
-//users
 
 

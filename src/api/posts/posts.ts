@@ -11,9 +11,6 @@ export const posts = {
     postUserPostsAPI : (formObj: PostFormType) => {
         return myGetInstance.post<ReturnNewPostType>(`/comments`,formObj)
     },
-    // putUserPostsAPI : (num: number, newPostObj) => {
-    //     return myGetInstance.put(`/comments/${num}`, newPostObj)
-    // },
     deleteUserPostsAPI : (num: number) => {
         return myGetInstance.delete(`posts/${num}`)
     },

@@ -9,8 +9,8 @@ export const setCommentsT = (postId: number) => async (d: Dispatch<ActionsTypes<
         d(commonA.fetchingToggle(true))
         let res = await comments.getUserPostsAPI(postId)
         console.log(res)
-        if (res.statusText === ""){
-           d(commentsA.setComments(res.data))
+        if (res.statusText === "") {
+            d(commentsA.setComments(res.data))
         } else {
 
         }

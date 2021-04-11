@@ -3,7 +3,7 @@ import { commentsA } from "./commentsA";
 import { CommentsArrayType } from "./commentsTypes";
 
 interface InitialCommentsType {
-   commentsInfo?: CommentsArrayType
+    commentsInfo?: CommentsArrayType
 }
 
 const initialCommentsState: InitialCommentsType = {}
