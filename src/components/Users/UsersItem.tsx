@@ -17,7 +17,8 @@ export const UsersItem: React.FC<UserItemProps> = ({userItem}) => {
 
     const showUserPosts = () => {
         d(setPostsT(userItem.id))
-        history.push("")
+        localStorage.setItem("userIdForPosts", String(userItem.id))
+        history.push("/content/posts")
     }
 
     return <div>

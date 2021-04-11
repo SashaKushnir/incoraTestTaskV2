@@ -16,6 +16,20 @@ export const postsR = (posts = initialUsersState, action: ActionsTypes<typeof po
                 ...posts,
                 postsInfo: action.postsArr
             }
+        case "ADD_NEW_POST_ITEM":
+            return {
+                ...posts,
+                postsInfo: posts.postsInfo?[...posts.postsInfo,
+                    action.newPostItem
+                ]: [action.newPostItem]
+            }
+        case "DELETE_POST_BY_ID":
+            return {
+                ...posts,
+                postsInfo: posts.postsInfo
+                    ?[...posts.postsInfo.filter((obj)=> obj.id!==action.postId)]
+                    : undefined
+            }
         default:
             return posts
     }

@@ -12,8 +12,11 @@ export const Header = ( ) => {
 
     return <header>
         <div className={s.headerWrapper}>
-            Header
-            <div className={s.toRight} onClick={logOut}>log out</div>
+            <div></div>
+            <span className={s.toCenter}>Header</span>
+            <div className={s.toRight}>
+                <h3 className={s.createPadding} onClick={logOut}>log out</h3>
+            </div>
         </div>
     </header>
 }

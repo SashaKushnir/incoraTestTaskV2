@@ -1,8 +1,17 @@
 .headerWrapper {
     background-color: darkgray;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.toCenter{
     text-align: center;
+    padding: 3% 0% 1%;
 }
 .toRight{
     text-align: right;
     color: white;
+
+}
+.createPadding {
+    padding: 3% 4% 1%;
 }

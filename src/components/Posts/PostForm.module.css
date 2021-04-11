@@ -1,0 +1,25 @@
+.toCenter{
+    text-align: center;
+    font-stretch: expanded;
+    font-weight: 300;
+}
+.background{
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 15%;
+    width: 70%;
+    height: 50%;
+}
+.background div div{
+    margin: 1%;
+}
+.button {
+    background-color: darkgray;
+    border: none;
+    border-radius: 5%;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+}
